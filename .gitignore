@@ -1,0 +1,9 @@
+# Ignorar archivos de caché de Python
+__pycache__/
+
+# Ignorar modelos de Inteligencia Artificial pesados
+*.pt
+
+# Ignorar fotos de prueba
+ultimo_mango_escaneado.jpg
+captura.jpg
