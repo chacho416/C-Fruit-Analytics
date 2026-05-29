@@ -1,4 +1,4 @@
-# 🥑 C-Fruit-Analitics: Estación AIoT de Clasificación Agrícola
+# 🥑 Chachos Software: Estación AIoT de Clasificación Agrícola
 
 Sistema de control de calidad automatizado mediante Inteligencia Artificial de las Cosas (AIoT). Este proyecto integra visión computacional con hardware físico para detectar el estado de salud de frutos en tiempo real sobre una línea de producción.
 
@@ -34,26 +34,32 @@ El proyecto opera bajo una arquitectura de *Edge Computing* (Procesamiento en el
    ```bash
    git clone [https://github.com/tu-usuario/C-Fruit-Analytics.git](https://github.com/tu-usuario/C-Fruit-Analytics.git)
    cd C-Fruit-Analytics
-   ```
-   2. **Instalar dependencias de Python**
-      pip install fastapi uvicorn ultralytics opencv-python pyserial requests
-      
-   3. Configuración de Red (Opcional):
-Para acceder al panel desde otros dispositivos, asegúrate de que el servidor se levante apuntando al host 0.0.0.0 y actualiza la variable URL_SERVIDOR en tu index.html con la IP IPv4 de tu computadora host.
-🎬 Uso del Sistema (Arranque Automático)
+
+```
+
+2. **Instalar dependencias de Python:**
+```bash
+pip install fastapi uvicorn ultralytics opencv-python pyserial requests
+
+```
+
+
+3. **Configuración de Red (Opcional):**
+Para acceder al panel desde otros dispositivos, asegúrate de que el servidor se levante apuntando al host `0.0.0.0` y actualiza la variable `URL_SERVIDOR` en tu `index.html` con la IP IPv4 de tu computadora host.
+
+## 🎬 Uso del Sistema (Arranque Automático)
+
 Para ambientes Windows, el sistema cuenta con un script de despliegue rápido:
 
-Conecta la placa Arduino al puerto USB.
+1. Conecta la placa Arduino al puerto USB.
+2. Asegúrate de tener la cámara despejada y bien iluminada.
+3. Ejecuta el archivo `iniciar_sistema.bat` con doble clic.
+4. Abre la interfaz web o ingresa desde cualquier dispositivo móvil conectado al mismo WiFi mediante la IP local en el puerto `8000`.
+5. Pasa un objeto por el sensor físico; el sistema capturará, procesará y graficará el resultado automáticamente.
 
-Asegúrate de tener la cámara despejada y bien iluminada.
+## 📂 Estructura del Proyecto
 
-Ejecuta el archivo iniciar_sistema.bat con doble clic.
-
-Abre la interfaz web o ingresa desde cualquier dispositivo móvil conectado al mismo WiFi mediante la IP local en el puerto 8000.
-
-Pasa un objeto por el sensor físico; el sistema capturará, procesará y graficará el resultado automáticamente.
-
-📂 Estructura del Proyecto
+```text
 📦 C-Fruit-Analytics
  ┣ 📜 servidor.py           # Core del backend y motor de inferencia YOLO
  ┣ 📜 cliente_serial.py     # Puente de escucha entre el Arduino y FastAPI
@@ -61,6 +67,12 @@ Pasa un objeto por el sensor físico; el sistema capturará, procesará y grafic
  ┣ 📜 iniciar_sistema.bat   # Script de automatización de arranque
  ┣ 📜 best.pt               # Modelo de pesos entrenados (YOLOv8)
  ┣ 📜 .gitignore            # Reglas de exclusión de Git
- ┗ 📜 README.md             # Documentación del proyecto
- ┗ 📜 Sensor_ir             # Sensor Fisico
- 
+ ┣ 📜 README.md             # Documentación del proyecto
+ ┗ 📂 Sensor_ir             # Sensor Fisico
+
+```
+
+## 👨‍💻 Autor
+
+**Hugo Nicolas Pulido Moreno** - Ingeniería en Computación
+
