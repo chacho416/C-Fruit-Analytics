@@ -1,4 +1,19 @@
-
+/**
+ * Chachos Software - Escaner Agricola
+ * Archivo: sensor_ir.ino
+ * Plataforma: Arduino UNO
+ *
+ * Descripcion:
+ *   Lee el pin digital de un sensor IR evasor de obstaculos.
+ *   El sensor tiene salida ACTIVA EN BAJO (LOW = objeto detectado).
+ *   Cuando detecta un fruto, envia el caracter '1' por Serial (una sola vez).
+ *   Cuando el fruto se retira, el sistema queda listo para el siguiente escaneo.
+ *
+ * Conexion del sensor IR evasor:
+ *   VCC  -> 5V  (Arduino)
+ *   GND  -> GND (Arduino)
+ *   OUT  -> Pin 2 (INPUT_PULLUP interno)
+ */
 
 // ---------------------------------------------------------------------------
 // Constantes de configuracion
