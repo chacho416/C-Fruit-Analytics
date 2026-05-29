@@ -5,7 +5,7 @@ import time
 # Configuración del Nodo IoT
 PUERTO_SERIAL = 'COM8' 
 BAUD_RATE = 9600
-URL_ALERTA = 'http://127.0.0.1:8000/alerta' 
+URL_ALERTA = 'http://127.0.0.1:5501/index.html' 
 
 try:
     print(f"Conectando a {PUERTO_SERIAL}...")

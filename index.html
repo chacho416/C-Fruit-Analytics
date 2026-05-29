@@ -204,7 +204,18 @@
 
       // Actualizar UI principal
       document.body.className = claseColor;
-      document.getElementById('estado-texto').innerText = veredicto.toUpperCase();
+      // --- INICIO DEL FILTRO DE TEXTO ---
+    let textoLimpio = veredicto.toUpperCase(); 
+
+    if (textoLimpio === "PALTA_MALOGRADA") {
+        textoLimpio = "AGUACATE ENFERMO"; 
+    } else if (textoLimpio === "PALTA_SANA") { // Cambia "PALTA_SANA" por el nombre exacto de tu otra clase si es distinto
+        textoLimpio = "AGUACATE SANO";
+    }
+
+    // Pintamos el texto ya corregido en la interfaz
+    document.getElementById('estado-texto').innerText = textoLimpio;
+    // --- FIN DEL FILTRO DE TEXTO ---;
       document.getElementById('confianza-valor').innerText = confianza;
       
       // Actualizar contadores

@@ -50,14 +50,14 @@ async def analizar_fruto(file: UploadFile = File(...)):
         detecciones = resultados[0].boxes
         
         if len(detecciones) == 0:
-            return {"veredicto": "No se detectó ningun aguacate en la imagen."}
+            return {"veredicto": "No se detectó ningún aguacate en la imagen."}
         
         # Tomamos el objeto con la mayor seguridad de detección
         mejor_deteccion = detecciones[0] 
         id_clase = int(mejor_deteccion.cls[0])
         confianza = float(mejor_deteccion.conf[0]) * 100
         
-        # Obtenemos el nombre exacto de la clase (Sana, Malograda, etc.)
+        # Obtenemos el nombre exacto de la clase (Sana, enferma, etc.)
         nombre_resultado = resultados[0].names[id_clase]
         
         # 4. Enviar el resultado de regreso a la página web
