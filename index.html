@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Chachos Software — Scanner Agrícola</title>
+  <title>C-Fruit-Analytics — Scanner Agrícola</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -96,7 +96,7 @@
   <div id="app">
     <header>
       <div class="logo">
-        <span class="logo-text">CHACHOS SOFTWARE</span>
+        <span class="logo-text">C-Fruit-Analytics</span>
         <span class="logo-badge">IA MADUREZ</span>
       </div>
     </header>
@@ -121,7 +121,7 @@
         <div class="stat"><span class="stat-label">Buenos</span><span class="stat-valor" id="cnt-buenos">0</span></div>
         <div class="stat"><span class="stat-label">Descarte</span><span class="stat-valor" id="cnt-malos">0</span></div>
       </div>
-      <span id="copyright">© 2025 Chachos Software · AIoT Agrícola</span>
+      <span id="copyright">© C-Fruit-Analytics</span>
     </footer>
   </div>
 
@@ -164,7 +164,7 @@
               document.getElementById('estado-texto').innerText = "ERROR DE IA";
               console.error(datos.error);
             } else {
-              document.getElementById('estado-texto').innerText = "SIN PALTA";
+              document.getElementById('estado-texto').innerText = "SIN AGUACATE";
             }
           })
           .catch(err => {
@@ -199,7 +199,7 @@
           contadores.malos++; 
           
           // LA NOTIFICACIÓN CRÍTICA EXIGIDA POR LA RÚBRICA
-          alert(`⚠️ ALERTA CRÍTICA: ¡Palta con defectos detectada! (${veredicto.toUpperCase()})`);
+          alert(`⚠️ ALERTA CRÍTICA: ¡Aguacate con defectos detectado! (${veredicto.toUpperCase()})`);
       }
 
       // Actualizar UI principal

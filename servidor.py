@@ -50,7 +50,7 @@ async def analizar_fruto(file: UploadFile = File(...)):
         detecciones = resultados[0].boxes
         
         if len(detecciones) == 0:
-            return {"veredicto": "No se detectó ninguna palta en la imagen."}
+            return {"veredicto": "No se detectó ningun aguacate en la imagen."}
         
         # Tomamos el objeto con la mayor seguridad de detección
         mejor_deteccion = detecciones[0] 
