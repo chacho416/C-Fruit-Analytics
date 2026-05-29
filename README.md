@@ -71,6 +71,7 @@ Para ambientes Windows, el sistema cuenta con un script de despliegue rápido:
  ┗ 📂 Sensor_ir             # Sensor Fisico
 
 ```
+<img width="1901" height="867" alt="image" src="https://github.com/user-attachments/assets/9c9a7cad-a25b-4208-b33d-a007ee107708" />
 
 ## 👨‍💻 Autor
 
